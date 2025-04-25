@@ -8,18 +8,18 @@ interface SeasonHeroProps {
 
 const SeasonHero = ({ title, description, imageSrc, color }: SeasonHeroProps) => {
   return (
-    <div className={`py-16 ${color}`}>
+    <div className={`${color} py-24`}>
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          <div className="md:w-1/2">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">{title}</h1>
-            <p className="text-lg">{description}</p>
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="lg:w-1/2">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4">{title}</h1>
+            <p className="text-xl opacity-90 max-w-2xl">{description}</p>
           </div>
-          <div className="md:w-1/2">
+          <div className="lg:w-1/2">
             <img 
               src={imageSrc} 
               alt={title} 
-              className="rounded-lg shadow-lg w-full h-64 md:h-96 object-cover"
+              className="rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 w-full h-[300px] md:h-[400px] object-cover"
             />
           </div>
         </div>
